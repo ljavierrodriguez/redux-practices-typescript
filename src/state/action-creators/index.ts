@@ -6,7 +6,7 @@ import { Action } from '../actions';
 export const searchRepositories = (term: string) => {
     return async (dispatch: Dispatch<Action>) => {
         dispatch({
-            type: ActionType.SEARCH_RESPOSITORIES
+            type: ActionType.SEARCH_REPOSITORIES
         })
 
         try {
@@ -21,13 +21,13 @@ export const searchRepositories = (term: string) => {
             })
 
             dispatch({
-                type: ActionType.SEARCH_RESPOSITORIES_SUCCESS,
+                type: ActionType.SEARCH_REPOSITORIES_SUCCESS,
                 payload: names
             });
 
         } catch (error) {
             dispatch({
-                type: ActionType.SEARCH_RESPOSITORIES_ERROR,
+                type: ActionType.SEARCH_REPOSITORIES_ERROR,
                 payload: error.message
             })
         }
